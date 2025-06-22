@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Luz de Lô</title>
+  <link rel="stylesheet" href="valuntariado.css">
+</head>
+
+<body>
+  <!--------CABEÇALHO-------->
+  <header>
+
+    <div class="left-content">
+      <img src="img/Logo3.png" alt="logo" height="110px" width="110px" />
+      <h1 class="cabecalho">Instituto Luz de Lô</h1>
+    </div>
+    <!--Link do instagram-->
+    <div class="redesocial right-content">
+      <a href="https://www.instagram.com/institutoluzdelo?igsh=cDZqeW10c3pubTZh">
+        <img src="img/Instagram.png" alt="logo do instagram">
+        <p>Acesse: @institutoluzdelo</p>
+      </a>
+    </div>
+
+  </header>
+  <!-----FOORMULARIO----->
+  <section id="form-voluntario">
+
+    <h2>Torne-se um Voluntário</h2>
+    <form id="cadastroForm" action="https://formsubmit.co/moiseskennedy2005@gmail.com" method="POST"
+      class="form-voluntario">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://institutoluzdelo.com/voluntariado.html">
+      <div class="form-group">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="Nome Completo" placeholder="Digite seu nome completo" required>
+        <span id="nomeError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label>Nacionalidade:</label>
+        <div class="radio-group">
+          <label for="nacionalidadeBrasileiro">
+            <input type="radio" id="nacionalidadeBrasileiro" name="Nacionalidade" value="Brasileiro" checked> Brasileiro
+          </label>
+          <label for="nacionalidadeEstrangeiro">
+            <input type="radio" id="nacionalidadeEstrangeiro" name="Nacionalidade" value="Estrangeiro"> Estrangeiro
+          </label>
+        </div>
+        <input type="text" id="nacionalidadeOutra" name="Nacionalidade - Outra" placeholder="Qual sua nacionalidade?"
+          style="display: none; margin-top: 10px;">
+        <span id="nacionalidadeError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="estadoCivil">Estado Civil:</label>
+        <select id="estadoCivil" name="Estado Civil" required>
+          <option value="">Selecione...</option>
+          <option value="Solteiro(a)">Solteiro(a)</option>
+          <option value="Casado(a)">Casado(a)</option>
+          <option value="Divorciado(a)">Divorciado(a)</option>
+          <option value="Viúvo(a)">Viúvo(a)</option>
+          <option value="União Estável">União Estável</option>
+        </select>
+        <span id="estadoCivilError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="CPF" placeholder="000.000.000-00" required maxlength="14">
+        <span id="cpfError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="rg">RG (Opcional):</label>
+        <input type="text" id="rg" name="RG" placeholder="Digite seu RG">
+        <span class="optional-field">Campo opcional.</span>
+        <span id="rgError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="orgaoExpedidor">Órgão Expedidor (Opcional):</label>
+        <input type="text" id="orgaoExpedidor" name="Órgão Expedidor" placeholder="Ex: SSP/SP">
+        <span class="optional-field">Campo opcional.</span>
+        <span id="orgaoExpedidorError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="profissao">Profissão (Opcional):</label>
+        <input type="text" id="profissao" name="Profissão" placeholder="Digite sua profissão">
+        <span class="optional-field">Campo opcional.</span>
+        <span id="profissaoError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="CEP" placeholder="00000-000" required maxlength="9">
+        <span id="cepError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="Rua" readonly placeholder="Preenchido automaticamente">
+        <span id="ruaError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="Número" placeholder="Nº da casa/apto" required>
+        <span id="numeroError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="Bairro" readonly placeholder="Preenchido automaticamente">
+        <span id="bairroError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="Cidade" readonly placeholder="Preenchido automaticamente">
+        <span id="cidadeError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="uf">UF (Estado):</label>
+        <input type="text" id="uf" name="UF" readonly placeholder="Preenchido automaticamente">
+        <span id="ufError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone/Celular:</label>
+        <input type="tel" id="telefone" name="Telefone/Celular" placeholder="(99) 99999-9999" required maxlength="15">
+        <span id="telefoneError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="E-mail" placeholder="nome@exemplo.com" required>
+        <span id="emailError" class="error-message"></span>
+      </div>
+
+      <!-------CLAUSULAS------>
+
+      <!--Clausula1------------>
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 1ª</h3>
+      <div class="clausula" id="clausula1">
+        O <strong>VOLUNTÁRIO</strong> aderente <strong>DECLARA</strong> que, de livre e espontânea vontade, adere às
+        condições deste instrumento para realizar
+        serviços voluntários para a <strong>ENTIDADE</strong> aderida, assim como, <strong>DECLARA</strong> estar ciente
+        da existência da
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/l9608.htm" target="_blank" class="lei-link">Lei 9.608/98</a>
+        e <strong>DECLARA</strong> estar ciente
+        de que a atividade objeto deste instrumento não é remunerada, não gera vínculo empregatício e nem gera
+        obrigações de natureza trabalhista, previdenciária
+        ou outra afim. Ainda, o <strong>VOLUNTÁRIO DECLARA</strong> estar ciente que o presente termo, não compreende
+        atividades de estágio curricular, que se rege
+        por Lei própria não aplicável ao serviço voluntário.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-1-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula2------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 2ª</h3>
+      <div class="clausula" id="clausula2">
+        O objeto deste instrumento será a prestação de serviço voluntário a ser desempenhado na sede da
+        <strong>ENTIDADE</strong> que consistirá nas seguintes atividades:
+      </div>
+      </div>
+      <h3 style="margin-top: 30px; color: #002471;">Parágrafo Primeiro</h3>
+      <div class="clausula" id="paragrafo1">
+        O <strong>VOLUNTÁRIO</strong> cumprirá as atividades abaixo, nos seguintes dias e horários comerciais definidos
+        entre as partes: <strong>SELECIONE A OPÇÃO</strong>
+      </div>
+
+      <!--Botões de decições dos voluntarios-->
+      <div class="horarios-disponibilidade">
+        <h4>Disponibilidade Semanal:</h4>
+        <div class="dia-disponibilidade">
+          <label>Segunda-Feira:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="segManha" name="Horarios[Segunda-Feira][]" value="Manhã">
+            <label for="segManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="segTarde" name="Horarios[Segunda-Feira][]" value="Tarde">
+            <label for="segTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+        <div class="dia-disponibilidade">
+          <label>Terça-Feira:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="terManha" name="Horarios[Terça-Feira][]" value="Manhã">
+            <label for="terManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="terTarde" name="Horarios[Terça-Feira][]" value="Tarde">
+            <label for="terTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+        <div class="dia-disponibilidade">
+          <label>Quarta-Feira:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="quaManha" name="Horarios[Quarta-Feira][]" value="Manhã">
+            <label for="quaManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="quaTarde" name="Horarios[Quarta-Feira][]" value="Tarde">
+            <label for="quaTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+        <div class="dia-disponibilidade">
+          <label>Quinta-Feira:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="quiManha" name="Horarios[Quinta-Feira][]" value="Manhã">
+            <label for="quiManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="quiTarde" name="Horarios[Quinta-Feira][]" value="Tarde">
+            <label for="quiTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+        <div class="dia-disponibilidade">
+          <label>Sexta-Feira:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="sexManha" name="Horarios[Sexta-Feira][]" value="Manhã">
+            <label for="sexManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="sexTarde" name="Horarios[Sexta-Feira][]" value="Tarde">
+            <label for="sexTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+        <div class="dia-disponibilidade">
+          <label>Sábado:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="sabManha" name="Horarios[Sábado][]" value="Manhã">
+            <label for="sabManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="sabTarde" name="Horarios[Sábado][]" value="Tarde">
+            <label for="sabTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+        <div class="dia-disponibilidade">
+          <label>Domingo:</label>
+          <div class="opcoes-turno">
+            <input type="checkbox" id="domManha" name="Horarios[Domingo][]" value="Manhã">
+            <label for="domManha" class="btn-turno">Manhã <br> 8:00 - 12:00</label>
+            <input type="checkbox" id="domTarde" name="Horarios[Domingo][]" value="Tarde">
+            <label for="domTarde" class="btn-turno">Tarde <br> 13:00 - 18:00</label>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 30px; color: #002471;">Parágrafo Segundo</h3>
+      <div class="clausula" id="paragrafo2">
+        As atividades, os dias e horários acima estabelecidos de pleno acordo entre as partes poderão ser revistos e
+        alterados a qualquer
+        momento, por iniciativa de quaisquer das partes, desde que conte com o expresso e formal consentimento da outra.
+      </div>
+
+      <!--Clausula3------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 3ª</h3>
+      <div class="clausula" id="clausula3">
+        O <strong>VOLUNTÁRIO</strong> poderá, eventualmente, ser aproveitado(a) em outras atividades da
+        <strong>ENTIDADE</strong> como, por
+        exemplo, em ações sociais voltadas aos objetivos assistenciais da instituição aderida, em locais diversos da
+        sede e em dias e horários
+        dos distintos dos pactuados, desde que conte com o expresso e formal consentimento do
+        <strong>VOLUNTÁRIO</strong> e desde que tais atividades
+        sejam compatíveis com as mencionadas neste instrumento.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-3-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula4------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 4ª</h3>
+      <div class="clausula" id="clausula4">
+        O <strong>VOLUNTÁRIO DECLARA</strong> que é detentor de todas as condições necessárias ao desempenho dos
+        serviços a que se compromete, dispondo
+        de tempo, capacidade física e emocional, e, que tem ciência de que, no caso de acarretar danos a terceiros,
+        sejam decorrentes de dolo ou culpa,
+        poderá ficar sujeito a arcar com os consequentes prejuízos.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-4-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula5------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 5ª</h3>
+      <div class="clausula" id="clausula5">
+        O <strong>VOLUNTÁRIO</strong> deverá cumprir, durante a vigência deste instrumento, o Estatuto, o Regimento
+        Interno e demais normas estabelecidas
+        pela <strong>ENTIDADE</strong>, cabendo ao <strong>VOLUNTÁRIO</strong> o dever de executar e cumprir as
+        atividades que lhe competem, respeitando
+        a duração e horários especificados, mantendo assiduidade, compromisso e responsabilidade com o fim de colaborar
+        com os objetivos assistenciais que
+        são prestados pela <strong>ENTIDADE</strong>.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-5-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula6------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 6ª</h3>
+      <div class="clausula" id="clausula6">
+        À <strong>ENTIDADE</strong> cabe assegurar ao <strong>VOLUNTÁRIO</strong> condições adequadas ao desenvolvimento
+        e execução das atividades previstas
+        neste Termo.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-6-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula7------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 7ª</h3>
+      <div class="clausula" id="clausula7">
+        O <strong>VOLUNTÁRIO DECLARA</strong> que deverá preservar a imagem da <strong>ENTIDADE</strong>, tomando os
+        cuidados necessários para
+        não maculá-la, bem como manter atitude proba, moral e ética.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-7-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula8------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 8ª</h3>
+      <div class="clausula" id="clausula8">
+        O <strong>VOLUNTÁRIO DECLARA</strong> estar ciente e <strong>AUTORIZA</strong> a instituição beneficiária, acima
+        qualificada, a título gratuito
+        (sem quaisquer ônus) e em caráter definitivo, irrevogável, irretratável e por prazo indeterminado, utilizar o
+        seu nome e sua imagem e voz obtidas,
+        captadas, gravadas e fotografadas nos trabalhos da instituição, bem como reproduzidas por qualquer forma de
+        tecnologia para uso em atividades
+        doutrinárias ou de divulgação, seja através de midia virtual, impressa, televisiva, radiodifusão, palestras e
+        seminários, dentre outros.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-8-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula9------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 9ª</h3>
+      <div class="clausula" id="clausula9">
+        Eventuais despesas necessárias ao desempenho das atividades do <strong>VOLUNTÁRIO</strong> serão ressarcidas
+        pela <strong>ENTIDADE</strong>, desde
+        que comprovadas documentalmente e desde que sejam expressas e formalmente autorizadas, nos termos do art. 3º,
+        <em>caput</em> e Parágrafo Único, da
+        <a href="https://www.planalto.gov.br/ccivil_03/leis/l9608.htm" target="_blank" class="lei-link">Lei
+          9.608/98</a>.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-9-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Clausula10------------>
+
+      <h3 style="margin-top: 30px; color: #002471;">Cláusula 10ª</h3>
+      <div class="clausula" id="clausula10">
+        O serviço voluntário será realizado a partir desta data pelo prazo de 1 (um) ano, podendo ser prorrogado por
+        igual período. O presente termo poderá ser
+        rescindido, a qualquer tempo, sem a necessidade de aviso prévio.
+      </div>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" name="clausula-10-checkbox" required> Declaro que li e concordo com a cláusula acima.
+      </label>
+
+      <!--Botão de Submeter formulario-->
+      <button type="submit">Enviar Cadastro</button>
+    </form>
+  </section>
+
+  <div id="clausulaModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h3 class="modal-title" id="modalClausulaTitle"></h3>
+      <div class="modal-text" id="modalClausulaText"></div>
+    </div>
+  </div>
+
+  <!--Botão flutuante-->
+
+  </form>
+  </section>
+  <a href="principal.html" class="btn-flutuante-principal" title="Voltar à Página Principal">Home 🏠</a>
+
+  <!---------FOOTER-‐------------->
+  <footer>
+    <div class="div1footer">
+      <h2 class="T1footer">
+        Se você deseja se tornar uma luz na vida de alguém, se voluntarie ou doe!
+        Pois assim podemos distribuir amor, respeito e carinho para todas essas mulheres 🦋
+      </h2>
+    </div>
+    <br>
+    <h3 class="T2footer">Apoiadores</h3>
+    <!--APOITADORES-->
+    <div class="carrosselPai">
+      <div class="carrosselFilho">
+        <div class="track">
+          <a href="https://g.co/kgs/4YcZxsP"><img src="img/C&A.png" alt="C&A" class="img_apoiadores"></a>
+          <a href="https:www.instagram.com/usemoreana?igsh=MXh3b2szOGJpejZpcA=="><img src="img/Moreana.jpg"
+              alt="Moreana" class="img_apoiadores"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-----Listas----->
+    <ul class="liFooter">
+      <li><strong>E-mail: </strong><a href="mailton:projetolusdelo@gmail.com">projetolusdelo@gmail.com</a></li>
+      <li><strong>Endereço: </strong><a href="https//:maps.app.goo.gl/Lt8hhRmsj3xCH57H9">Rua Couto Magalhães 2109
+          (centro) - Franca, SP</a></li>
+      <li><strong>CEP: </strong>14400-020</li>
+    </ul>
+  </footer>
+  <script src="voluntariado.js"></script>
+</body>
+
+</html>
