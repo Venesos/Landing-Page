@@ -1,4 +1,4 @@
- // Funções auxiliares para exibir/limpar mensagens de erro
+// Funções auxiliares para exibir/limpar mensagens de erro
  function displayError(elementId, message) {
     const errorElement = document.getElementById(elementId);
     if (errorElement) {

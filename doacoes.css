@@ -336,6 +336,13 @@ footer {
   header .cabecalho {
     font-size: 22px;
   }
+  
+  main {
+    margin: 0;
+    border: none;
+    border-radius: 1px;
+  }
+
 
   .redesocial a {
     display: none;

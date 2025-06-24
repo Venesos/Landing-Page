@@ -426,8 +426,7 @@ footer {
 @media (max-width: 768px) {
 
   .enquadrar {
-    margin: 20px 0 0 0;
-
+    margin: 0;
   }
 
   header {
@@ -513,7 +512,10 @@ footer {
     box-sizing: border-box;
     margin-bottom: 20px;
   }
-
+  
+  .conteudo-expansivel.ativo {
+    max-height: 4000px;
+  }
 
   .listaF {
     font-size: 14px;
